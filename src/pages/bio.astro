@@ -1,0 +1,177 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About - Sengeki Tattoo Studio">
+  <div class="container">
+    <h1>About the Artist</h1>
+    
+    <div class="bio-content">
+      <div class="bio-image">
+        <div class="image-placeholder">Artist Photo</div>
+      </div>
+      
+      <div class="bio-text">
+        <h2>Welcome to Sengeki</h2>
+        <p>
+          With over [X] years of experience in the tattoo industry, I specialize in 
+          traditional Japanese irezumi and contemporary custom designs. Every piece 
+          I create is a collaboration between artist and client, ensuring that your 
+          tattoo is not just ink on skin, but a meaningful expression of your story.
+        </p>
+        
+        <h3>Specializations</h3>
+        <ul class="specializations">
+          <li>Japanese Traditional (Irezumi)</li>
+          <li>Full Body Suits (Horimono)</li>
+          <li>Custom Design Work</li>
+          <li>Cover-ups & Restoration</li>
+          <li>Black & Grey Realism</li>
+        </ul>
+        
+        <h3>Philosophy</h3>
+        <p>
+          Tattooing is an ancient art form that requires respect, patience, and 
+          dedication. I approach each piece with the understanding that you're 
+          carrying this work for life. That responsibility drives every decision, 
+          from the initial sketch to the final touch-up.
+        </p>
+        
+        <h3>Experience</h3>
+        <p>
+          Trained under [Master Name] in [Location]. Featured in [Publications/Events].
+          Member of [Associations]. Continuing to study traditional techniques while 
+          pushing creative boundaries.
+        </p>
+      </div>
+    </div>
+    
+    <section class="credentials">
+      <h2>Credentials & Features</h2>
+      <div class="credentials-grid">
+        <div class="credential-card">
+          <h3>🏆 Award Winning</h3>
+          <p>Recognized at international tattoo conventions</p>
+        </div>
+        <div class="credential-card">
+          <h3>🧼 Fully Licensed</h3>
+          <p>Health department certified, bloodborne pathogen trained</p>
+        </div>
+        <div class="credential-card">
+          <h3>🎨 Custom Designs</h3>
+          <p>Every piece is original, created specifically for you</p>
+        </div>
+        <div class="credential-card">
+          <h3>🛡️ Safe & Clean</h3>
+          <p>Sterile equipment, single-use needles, professional studio</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <style>
+    .bio-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      margin: 3rem 0;
+      align-items: start;
+    }
+    
+    .bio-image {
+      position: sticky;
+      top: 100px;
+    }
+    
+    .image-placeholder {
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, var(--secondary-color), var(--bg-color));
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-size: 1.2rem;
+    }
+    
+    .bio-text h2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .bio-text p {
+      margin-bottom: 1.5rem;
+      color: #ddd;
+    }
+    
+    .bio-text h3 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .specializations {
+      list-style: none;
+      padding-left: 0;
+    }
+    
+    .specializations li {
+      padding: 0.5rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #ddd;
+    }
+    
+    .specializations li::before {
+      content: "•";
+      color: var(--accent-color);
+      position: absolute;
+      left: 0;
+      font-size: 1.5rem;
+      line-height: 1;
+    }
+    
+    .credentials {
+      margin-top: 4rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    .credentials h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .credential-card {
+      background-color: var(--secondary-color);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .credential-card h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+    
+    .credential-card p {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      .bio-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .bio-image {
+        position: static;
+      }
+    }
+  </style>
+</BaseLayout>

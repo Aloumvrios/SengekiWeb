@@ -1,0 +1,298 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Contact - Sengeki Tattoo Studio">
+  <div class="container">
+    <h1>Get In Touch</h1>
+    <p class="subtitle">Ready to start your next piece? Let's talk.</p>
+    
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        
+        <div class="info-item">
+          <h3>📍 Studio Location</h3>
+          <p>[Studio Address]<br/>[City, Country]<br/>[Postal Code]</p>
+        </div>
+        
+        <div class="info-item">
+          <h3>📧 Email</h3>
+          <p><a href="mailto:contact@sengeki.com">contact@sengeki.com</a></p>
+        </div>
+        
+        <div class="info-item">
+          <h3>📱 Phone</h3>
+          <p><a href="tel:+1234567890">+XX XXX XXX XXXX</a></p>
+        </div>
+        
+        <div class="info-item">
+          <h3>🕐 Hours</h3>
+          <p>
+            Tuesday - Saturday: 12:00 - 20:00<br/>
+            Sunday - Monday: By Appointment<br/>
+            Walk-ins: Welcome (availability permitting)
+          </p>
+        </div>
+        
+        <div class="social-links">
+          <h3>Follow Us</h3>
+          <div class="social-buttons">
+            <a href="#" class="social-btn">Instagram</a>
+            <a href="#" class="social-btn">Facebook</a>
+            <a href="#" class="social-btn">Twitter</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="contact-form-wrapper">
+        <h2>Booking Inquiry</h2>
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" />
+          </div>
+          
+          <div class="form-group">
+            <label for="type">Tattoo Type</label>
+            <select id="type" name="type">
+              <option value="">Select...</option>
+              <option value="first-time">First Tattoo</option>
+              <option value="custom">Custom Design</option>
+              <option value="japanese">Japanese Traditional</option>
+              <option value="coverup">Cover-up</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="placement">Placement</label>
+            <input type="text" id="placement" name="placement" placeholder="e.g., forearm, back, chest" />
+          </div>
+          
+          <div class="form-group">
+            <label for="size">Approximate Size</label>
+            <input type="text" id="size" name="size" placeholder="e.g., 10cm x 15cm" />
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Tell Me About Your Idea *</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Describe your concept, any reference images, meaning behind the design, etc."></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">Send Inquiry</button>
+        </form>
+        
+        <p class="form-note">
+          * Required fields. I typically respond within 48 hours. Please include reference images if available.
+        </p>
+      </div>
+    </div>
+    
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>Do you require a deposit?</h3>
+          <p>Yes, a deposit is required to secure your appointment. This is deducted from the final price and is non-refundable if you cancel without 48 hours notice.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>What's your pricing?</h3>
+          <p>Pricing varies based on size, complexity, and placement. Minimum charge is [X]. Hourly rate is [X]. Custom quotes provided after consultation.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>Do you do walk-ins?</h3>
+          <p>Walk-ins are welcome based on availability. For larger pieces or specific designs, appointments are recommended.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3>How should I prepare?</h3>
+          <p>Get a good night's sleep, eat before your appointment, stay hydrated, and avoid alcohol 24 hours before. Wear appropriate clothing for the placement area.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <style>
+    .subtitle {
+      color: #ccc;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+    
+    .contact-info h2,
+    .contact-form-wrapper h2 {
+      margin-bottom: 1.5rem;
+    }
+    
+    .info-item {
+      margin-bottom: 2rem;
+    }
+    
+    .info-item h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .info-item p {
+      color: #ddd;
+    }
+    
+    .info-item a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    .info-item a:hover {
+      text-decoration: underline;
+    }
+    
+    .social-links {
+      margin-top: 2rem;
+    }
+    
+    .social-links h3 {
+      margin-bottom: 1rem;
+    }
+    
+    .social-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .social-btn {
+      padding: 0.5rem 1rem;
+      background-color: var(--secondary-color);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-color);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    
+    .social-btn:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      border-color: var(--accent-color);
+    }
+    
+    .contact-form-wrapper {
+      background-color: var(--secondary-color);
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: var(--bg-color);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: var(--text-color);
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    
+    .submit-btn:hover {
+      background-color: #d4b577;
+    }
+    
+    .form-note {
+      margin-top: 1rem;
+      color: #999;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    
+    .faq {
+      padding-top: 3rem;
+      border-top: 1px solid var(--border-color);
+    }
+    
+    .faq h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .faq-item {
+      background-color: var(--secondary-color);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+    }
+    
+    .faq-item h3 {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+    
+    .faq-item p {
+      color: #ddd;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</BaseLayout>
