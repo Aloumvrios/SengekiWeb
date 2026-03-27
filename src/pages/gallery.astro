@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 // Placeholder gallery items - replace with real images later
 const galleryItems = [
+  { id: 0, title: 'Turtle with Hoju jewels', category: 'Traditional', src: '/turtle-hoju-jewels.jpg' },
   { id: 1, title: 'Japanese Dragon', category: 'Traditional', src: '/placeholder1.jpg' },
   { id: 2, title: 'Koi Fish', category: 'Japanese', src: '/placeholder2.jpg' },
   { id: 3, title: 'Cherry Blossom', category: 'Nature', src: '/placeholder3.jpg' },
@@ -33,9 +34,7 @@ const categories = ['All', ...new Set(galleryItems.map(item => item.category))];
     <div class="gallery-grid">
       {galleryItems.map(item => (
         <div class="gallery-item" data-category={item.category}>
-          <div class="image-placeholder">
-            <span>{item.title}</span>
-          </div>
+          <img src={item.src} alt={item.title} />
           <div class="overlay">
             <h3>{item.title}</h3>
             <p>{item.category}</p>
@@ -93,15 +92,10 @@ const categories = ['All', ...new Set(galleryItems.map(item => item.category))];
       border: 1px solid var(--border-color);
     }
     
-    .image-placeholder {
+    .gallery-item img {
       width: 100%;
       height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--secondary-color), var(--bg-color));
-      color: #666;
-      font-size: 1.2rem;
+      object-fit: cover;
     }
     
     .overlay {
