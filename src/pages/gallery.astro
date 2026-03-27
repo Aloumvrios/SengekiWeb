@@ -4,15 +4,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 // Placeholder gallery items - replace with real images later
 const galleryItems = [
   { id: 0, title: 'Turtle with Hoju jewels', category: 'Traditional', src: '/turtle-hoju-jewels.jpg' },
-  { id: 1, title: 'Japanese Dragon', category: 'Traditional', src: '/placeholder1.jpg' },
-  { id: 2, title: 'Koi Fish', category: 'Japanese', src: '/placeholder2.jpg' },
-  { id: 3, title: 'Cherry Blossom', category: 'Nature', src: '/placeholder3.jpg' },
-  { id: 4, title: 'Samurai Portrait', category: 'Traditional', src: '/placeholder4.jpg' },
-  { id: 5, title: 'Geisha', category: 'Japanese', src: '/placeholder5.jpg' },
-  { id: 6, title: 'Phoenix', category: 'Mythology', src: '/placeholder6.jpg' },
-  { id: 7, title: 'Wave Pattern', category: 'Traditional', src: '/placeholder7.jpg' },
-  { id: 8, title: 'Lotus Flower', category: 'Nature', src: '/placeholder8.jpg' },
-  { id: 9, title: 'Oni Mask', category: 'Japanese', src: '/placeholder9.jpg' },
+  { id: 1, title: 'Dog and flowers', category: 'Traditional', src: '/dog-flowers.jpg' },
+  { id: 2, title: 'Japanese Dragon', category: 'Traditional', src: '/placeholder1.jpg' },
+  { id: 3, title: 'Koi Fish', category: 'Japanese', src: '/placeholder2.jpg' },
+  { id: 4, title: 'Cherry Blossom', category: 'Nature', src: '/placeholder3.jpg' },
+  { id: 5, title: 'Samurai Portrait', category: 'Traditional', src: '/placeholder4.jpg' },
+  { id: 6, title: 'Geisha', category: 'Japanese', src: '/placeholder5.jpg' },
+  { id: 7, title: 'Phoenix', category: 'Mythology', src: '/placeholder6.jpg' },
+  { id: 8, title: 'Wave Pattern', category: 'Traditional', src: '/placeholder7.jpg' },
+  { id: 9, title: 'Lotus Flower', category: 'Nature', src: '/placeholder8.jpg' },
+  { id: 10, title: 'Oni Mask', category: 'Japanese', src: '/placeholder9.jpg' },
 ];
 
 const categories = ['All', ...new Set(galleryItems.map(item => item.category))];
