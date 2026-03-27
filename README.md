@@ -107,6 +107,7 @@ wrangler pages deploy ./dist
 - [ ] Optimize images for web
 - [ ] Add meta tags for SEO
 - [ ] Consider adding a lightbox for gallery
+- [ ] 
 
 ## License
 
